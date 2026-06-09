@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Anton", sans-serif;
+  --font-sans: "Manrope", sans-serif;
+
+  /* SPYLT-energy palette tuned for a design studio */
+  --color-ink: #0d0b0a;
+  --color-cream: #f5ede1;
+  --color-milk: #fbf6ef;
+  --color-punch: #ff4d2e; /* electric coral accent */
+  --color-grape: #6c4cff; /* secondary pop */
+  --color-lime: #c8ff3d; /* highlight pop */
+  --color-stone: #8a8178;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+/* Utility layers */
+@layer utilities {
+  .display {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    line-height: 0.85;
+    letter-spacing: -0.01em;
+  }
+  .stroke-text {
+    -webkit-text-stroke: 2px var(--color-cream);
+    color: transparent;
+  }
+  .stroke-text-ink {
+    -webkit-text-stroke: 2px var(--color-ink);
+    color: transparent;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+::selection {
+  background: var(--color-punch);
+  color: var(--color-milk);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ink);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-punch);
+  border-radius: 999px;
+}
