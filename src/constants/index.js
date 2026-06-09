@@ -1,3 +1,7 @@
+// Prefix public assets with Vite's base so paths resolve on GitHub Pages
+// (served from /studio-willow/) and locally (served from /).
+export const asset = (p) => `${import.meta.env.BASE_URL}${p}`;
+
 export const navLinks = [
   { id: "work", title: "The Work" },
   { id: "services", title: "Work With Me" },
@@ -16,7 +20,7 @@ export const services = [
       "Conversion-focused page design",
       "Launched live in 14 days",
     ],
-    accent: "punch",
+    accent: "oxblood",
   },
   {
     tag: "Already Started?",
@@ -29,7 +33,7 @@ export const services = [
       "Strategic redesign & polish",
       "From half-done to fully live",
     ],
-    accent: "grape",
+    accent: "clay",
   },
 ];
 
@@ -38,21 +42,24 @@ export const work = [
     name: "Austroad Line Marking",
     category: "Trade & Services",
     year: "2024",
-    color: "#ff4d2e",
+    color: "#8a0b1c",
+    url: "https://austroadlinemarking.com.au",
     desc: "A bold, no-nonsense site for a line-marking crew that wanted to look as sharp as their work.",
   },
   {
     name: "Flow & Bloom",
     category: "Women's Health Nursing",
     year: "2024",
-    color: "#6c4cff",
+    color: "#8d695d",
+    url: "https://flowandbloom.com",
     desc: "Warm, trustworthy and calming — a brand that makes booking a consult feel effortless.",
   },
   {
     name: "Abs by Alana",
     category: "Fitness Coaching",
     year: "2025",
-    color: "#c8ff3d",
+    color: "#c4bab3",
+    url: "https://absbyalana.com",
     desc: "High-energy fitness coaching platform built to convert scrollers into committed members.",
   },
 ];

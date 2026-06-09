@@ -10,25 +10,34 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Hero has a dark photo overlay, so the nav starts light-on-dark and flips
+  // to dark-on-cream once you scroll onto the page body.
+  const onDark = !scrolled;
+
   return (
     <header
       className={`fixed top-0 left-0 z-50 w-full transition-all duration-500 ${
-        scrolled
-          ? "bg-ink/80 py-3 backdrop-blur-md"
-          : "bg-transparent py-5"
+        scrolled ? "bg-cream/90 py-3 shadow-sm backdrop-blur-md" : "bg-transparent py-5"
       }`}
     >
       <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-5 md:px-10">
-        <a href="#top" className="display text-2xl tracking-tight text-cream md:text-3xl">
-          STUDIO<span className="text-punch">.</span>WILLOW
+        <a
+          href="#top"
+          className={`display text-2xl tracking-tight transition-colors md:text-3xl ${
+            onDark ? "text-cream" : "text-ink"
+          }`}
+        >
+          Studio<span className="text-oxblood">.</span>Willow
         </a>
 
-        <ul className="hidden items-center gap-8 text-sm font-semibold uppercase tracking-widest md:flex">
+        <ul className="hidden items-center gap-8 text-xs font-semibold uppercase tracking-[0.2em] md:flex">
           {navLinks.map((link) => (
             <li key={link.id}>
               <a
                 href={`#${link.id}`}
-                className="text-cream/70 transition-colors hover:text-punch"
+                className={`transition-colors hover:text-oxblood ${
+                  onDark ? "text-cream/80" : "text-ink/70"
+                }`}
               >
                 {link.title}
               </a>
@@ -38,7 +47,7 @@ export default function Navbar() {
 
         <a
           href="#contact"
-          className="group relative overflow-hidden rounded-full bg-punch px-5 py-2.5 text-xs font-extrabold uppercase tracking-widest text-milk transition-transform hover:scale-105 md:px-7 md:text-sm"
+          className="rounded-full bg-oxblood px-5 py-2.5 text-xs font-bold uppercase tracking-[0.2em] text-milk transition-transform hover:scale-105 md:px-7"
         >
           Start a Project
         </a>

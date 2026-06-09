@@ -42,15 +42,15 @@ export default function Marquee() {
     <div className="flex shrink-0 items-center">
       {marqueeWords.map((w, i) => (
         <span key={i} className="flex items-center">
-          <span className="display text-[8vw] text-ink md:text-[5.5vw]">{w}</span>
-          <span className="mx-6 text-[5vw] text-ink md:mx-10 md:text-[3vw]">✦</span>
+          <span className="display text-[8vw] text-cream md:text-[5vw]">{w}</span>
+          <span className="mx-6 text-[5vw] text-taupe md:mx-10 md:text-[2.5vw]">✦</span>
         </span>
       ))}
     </div>
   );
 
   return (
-    <section ref={root} className="overflow-hidden bg-punch py-6 md:py-8">
+    <section ref={root} className="overflow-hidden bg-oxblood py-6 md:py-8">
       <div className="marquee-track flex w-max whitespace-nowrap">
         <Row />
         <Row />

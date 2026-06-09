@@ -17,7 +17,7 @@ export default function Message() {
       // Word-by-word illumination as the section is pinned and scrubbed
       gsap.fromTo(
         ".msg-word",
-        { opacity: 0.12 },
+        { opacity: 0.15 },
         {
           opacity: 1,
           stagger: 0.5,
@@ -35,12 +35,12 @@ export default function Message() {
   );
 
   return (
-    <section ref={root} className="bg-ink px-5 py-32 md:py-48">
+    <section ref={root} className="bg-cream px-5 py-32 md:py-48">
       <div className="mx-auto max-w-5xl">
-        <p className="mb-10 text-center text-xs font-bold uppercase tracking-[0.3em] text-punch">
+        <p className="mb-10 text-center text-xs font-bold uppercase tracking-[0.3em] text-oxblood">
           The Difference
         </p>
-        <h2 className="display flex flex-wrap justify-center gap-x-4 gap-y-2 text-center text-3xl leading-tight text-cream md:text-6xl">
+        <h2 className="display flex flex-wrap justify-center gap-x-4 gap-y-2 text-center text-3xl leading-tight text-ink md:text-6xl">
           {words.map((w, i) => (
             <span key={i} className="msg-word">
               {w}

@@ -24,12 +24,12 @@ export default function Industries() {
   );
 
   return (
-    <section ref={root} className="bg-lime px-5 py-28 text-ink md:py-40">
+    <section ref={root} className="bg-taupe px-5 py-28 text-ink md:py-40">
       <div className="mx-auto max-w-[1400px]">
-        <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-ink/60">
+        <p className="mb-4 text-xs font-bold uppercase tracking-[0.3em] text-oxblood">
           Who It's For
         </p>
-        <h2 className="display mb-12 text-5xl md:text-7xl">Built For Brands Like Yours</h2>
+        <h2 className="display mb-12 text-5xl md:text-7xl">Built for brands like yours</h2>
 
         <div className="divide-y divide-ink/15 border-y border-ink/15">
           {industries.map((item, i) => (
