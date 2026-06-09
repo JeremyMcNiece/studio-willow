@@ -44,6 +44,7 @@ export const work = [
     year: "2024",
     color: "#8a0b1c",
     url: "https://austroadlinemarking.com.au",
+    image: "images/work-austroad.png",
     desc: "A bold, no-nonsense site for a line-marking crew that wanted to look as sharp as their work.",
   },
   {
@@ -52,14 +53,16 @@ export const work = [
     year: "2024",
     color: "#8d695d",
     url: "https://flowandbloom.com",
+    image: "images/work-flowbloom.png",
     desc: "Warm, trustworthy and calming — a brand that makes booking a consult feel effortless.",
   },
   {
     name: "Abs by Alana",
     category: "Fitness Coaching",
     year: "2025",
-    color: "#c4bab3",
+    color: "#d36ba0",
     url: "https://absbyalana.com",
+    image: "images/work-absbyalana.png",
     desc: "High-energy fitness coaching platform built to convert scrollers into committed members.",
   },
 ];
